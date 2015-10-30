@@ -126,7 +126,6 @@
     <Compile Include="Handlers\MediaTypeHandler.cs" />
     <Compile Include="Interfaces\IBlobStorage.cs" />
     <Compile Include="Interfaces\IFhirIndex.cs" />
-    <Compile Include="Interfaces\IFhirService.cs" />
     <Compile Include="Interfaces\IFhirStore.cs" />
     <Compile Include="Interfaces\IGenerator.cs" />
     <Compile Include="Interfaces\IResourceValidator.cs" />
@@ -163,6 +162,7 @@
     <Compile Include="Service\Export.cs" />
     <Compile Include="Service\FhirService.cs" />
     <Compile Include="Service\HistoryParameters.cs" />
+    <Compile Include="Interfaces\IFhirService.cs" />
     <Compile Include="Service\Import.cs" />
     <Compile Include="Service\IServiceListener.cs" />
     <Compile Include="Service\KeyMapper.cs" />

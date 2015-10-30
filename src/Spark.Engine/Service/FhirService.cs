@@ -20,7 +20,7 @@ using Spark.Engine.Logging;
 namespace Spark.Service
 {
 
-    public class FhirService
+    public class FhirService : IFhirService
     {
         protected IFhirStore fhirStore;
         protected ISnapshotStore snapshotstore;
