@@ -165,6 +165,7 @@
     <Compile Include="Interfaces\IFhirService.cs" />
     <Compile Include="Service\Import.cs" />
     <Compile Include="Service\IServiceListener.cs" />
+    <Compile Include="Interfaces\ITransfer.cs" />
     <Compile Include="Service\KeyMapper.cs" />
     <Compile Include="Service\Pager.cs" />
     <Compile Include="Service\ServiceListener.cs" />

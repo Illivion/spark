@@ -14,6 +14,7 @@ using Spark.Core;
 using Spark.Engine.Core;
 using Spark.Engine.Extensions;
 using Hl7.Fhir.Rest;
+using Spark.Engine.Interfaces;
 
 namespace Spark.Service
 {
@@ -23,13 +24,13 @@ namespace Spark.Service
         IFhirStore fhirStore;
         ISnapshotStore snapshotstore;
         ILocalhost localhost;
-        Transfer transfer;
+        ITransfer transfer;
         IList<ModelInfo.SearchParamDefinition> searchParameters;
 
         public const int MAX_PAGE_SIZE = 100;
         public const int DEFAULT_PAGE_SIZE = 20;
 
-        public Pager(IFhirStore fhirStore, ISnapshotStore snapshotstore, ILocalhost localhost, Transfer transfer, List<ModelInfo.SearchParamDefinition> searchParameters)
+        public Pager(IFhirStore fhirStore, ISnapshotStore snapshotstore, ILocalhost localhost, ITransfer transfer, List<ModelInfo.SearchParamDefinition> searchParameters)
         {
             this.fhirStore = fhirStore;
             this.snapshotstore = snapshotstore;

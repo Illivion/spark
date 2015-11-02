@@ -15,6 +15,7 @@ using Spark.Core;
 using Spark.Engine.Core;
 using Spark.Engine.Extensions;
 using Spark.Engine.Auxiliary;
+using Spark.Engine.Interfaces;
 using Spark.Engine.Logging;
 
 namespace Spark.Service
@@ -30,10 +31,25 @@ namespace Spark.Service
         protected ILocalhost localhost;
         protected IServiceListener serviceListener;
 
-        protected Transfer transfer;
+        protected ITransfer transfer;
         protected Pager pager;
 
         private SparkEngineEventSource _log = SparkEngineEventSource.Log;
+
+        public FhirService(ILocalhost localhost, IFhirStore fhirStore, ISnapshotStore snapshotStore, IGenerator keyGenerator, IFhirIndex fhirIndex, IServiceListener serviceListener, ITransfer transfer)
+        {
+            this.localhost = localhost;
+            this.fhirStore = fhirStore;
+            this.snapshotstore = snapshotStore;
+            this.keyGenerator = keyGenerator;
+            this.fhirIndex = fhirIndex;
+            this.serviceListener = serviceListener;
+
+            this.transfer = transfer;
+
+            pager = new Pager(this.fhirStore, snapshotstore, localhost, transfer, ModelInfo.SearchParameters);
+            //TODO: Use FhirModel instead of ModelInfo for the searchparameters.
+        }
 
         public FhirService(ILocalhost localhost, IFhirStore fhirStore, ISnapshotStore snapshotStore, IGenerator keyGenerator, IFhirIndex fhirIndex, IServiceListener serviceListener)
         {
@@ -45,6 +61,7 @@ namespace Spark.Service
             this.serviceListener = serviceListener;
 
             transfer = new Transfer(this.keyGenerator, localhost);
+
             pager = new Pager(this.fhirStore, snapshotstore, localhost, transfer, ModelInfo.SearchParameters);
             //TODO: Use FhirModel instead of ModelInfo for the searchparameters.
         }
