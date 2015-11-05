@@ -36,10 +36,6 @@
       <HintPath>..\..\packages\Hl7.Fhir.DSTU2.0.90.2\lib\net45\Hl7.Fhir.DSTU2.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Diagnostics.Tracing.EventSource, Version=1.1.25.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.25\lib\net40\Microsoft.Diagnostics.Tracing.EventSource.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.7\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -126,6 +122,7 @@
     <Compile Include="Handlers\MediaTypeHandler.cs" />
     <Compile Include="Interfaces\IBlobStorage.cs" />
     <Compile Include="Interfaces\IFhirIndex.cs" />
+    <Compile Include="Interfaces\IFhirService.cs" />
     <Compile Include="Interfaces\IFhirStore.cs" />
     <Compile Include="Interfaces\IGenerator.cs" />
     <Compile Include="Interfaces\IResourceValidator.cs" />
@@ -162,7 +159,7 @@
     <Compile Include="Service\Export.cs" />
     <Compile Include="Service\FhirService.cs" />
     <Compile Include="Service\HistoryParameters.cs" />
-    <Compile Include="Interfaces\IFhirService.cs" />
+    <Compile Include="Interfaces\IRestfulFhirService.cs" />
     <Compile Include="Service\Import.cs" />
     <Compile Include="Service\IServiceListener.cs" />
     <Compile Include="Interfaces\ITransfer.cs" />

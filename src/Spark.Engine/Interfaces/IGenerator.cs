@@ -17,6 +17,4 @@ namespace Spark.Core
         bool CustomResourceIdAllowed(string value);
     }
 
-    
-
 }

@@ -226,8 +226,6 @@ namespace Spark.Service
 
         public FhirResponse Search(string type, SearchParams searchCommand)
         {
-            _log.ServiceMethodCalled("search");
-
             Validate.TypeName(type);
             SearchResults results = fhirIndex.Search(type, searchCommand);
             

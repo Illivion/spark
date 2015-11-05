@@ -135,7 +135,7 @@ namespace Spark.Engine.Core
 
             return Respond.WithError(HttpStatusCode.Gone, message);
         }
-
+        
         public static FhirResponse NotImplemented
         {
             get
