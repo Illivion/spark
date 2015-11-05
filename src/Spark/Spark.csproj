@@ -395,10 +395,6 @@
       <Project>{426991a6-546c-43d5-b055-a38d0175824f}</Project>
       <Name>Spark.Engine</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Spark.Mongo\Spark.Mongo.csproj">
-      <Project>{5f0eaea9-5226-46ff-a915-4de9b3ba6add}</Project>
-      <Name>Spark.Mongo</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -159,7 +159,6 @@
     <Compile Include="Service\Export.cs" />
     <Compile Include="Service\FhirService.cs" />
     <Compile Include="Service\HistoryParameters.cs" />
-    <Compile Include="Interfaces\IRestfulFhirService.cs" />
     <Compile Include="Service\Import.cs" />
     <Compile Include="Service\IServiceListener.cs" />
     <Compile Include="Interfaces\ITransfer.cs" />
